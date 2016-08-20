@@ -1,0 +1,182 @@
+/*
+Base Reset CSS
+ */
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+}
+body{
+	font-family: "Microsoft Yahei";
+	background:url(../images/bg_mobile.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-attachment: fixed;
+}
+a{
+	text-decoration: none;
+}
+ul,li{
+	padding:0;
+	margin:0;
+	list-style: none;
+}
+
+
+
+
+/*
+Common
+ */
+.container h1{
+	color:#333;
+	font-weight: 100;
+	background: rgba(255,255,255,.9);
+	text-align: center;
+}
+.container ul li{
+	font-size: 60px;
+	font-weight: 100;
+	color:#fff;
+	border-radius: 10px;
+	text-align: center;
+}
+.container ul li:nth-child(1){
+	background: rgba(255,102,102,.7);
+}
+.container ul li:nth-child(2){
+	background: rgba(0,204,153,.75);
+}
+.container ul li:nth-child(3){
+	background: rgba(204,153,204,.55);
+}
+.container ul li:nth-child(4){
+	background: rgba(255,255,255,.2);
+}
+sub{
+	font-weight: 400;
+	font-size: 15px;
+}
+
+
+
+
+/*
+桌面显示器,width>=992px
+ */
+@media (min-width: 992px){
+
+.container{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin:-240px 0 0 -480px;
+	width:960px;
+	height:480px;
+	text-align: center;
+	background: rgba(0,0,0,.3);
+	border-radius: 10px;
+	transition: all 0.5s;
+}
+
+.container h1{
+	margin:50px 0;
+	padding:20px;
+	font-size:40px;
+}
+
+.container ul{
+	overflow: auto;
+}
+.container ul li{
+	display: inline-block;
+	width:180px;
+	height:180px;
+	line-height:180px;
+	font-size: 60px;
+	font-weight: 100;
+	color:#fff;
+	border-radius: 10px;
+}
+.container ul li:nth-child(2){
+	margin:0 15px;
+}
+.container ul li:nth-child(3){
+	margin:0 15px 0 0;
+}
+
+
+}
+
+
+/*
+平板,768px=<width<=991px
+ */
+@media (min-width: 768px) and (max-width: 991px) {
+	.container{
+		position: relative;
+		top:4%;
+		padding:4%;	
+	}
+	.container h1{
+		height:160px;
+		line-height:160px;
+		border-radius:10px;
+	}
+	.container ul{
+		width:100%;
+		padding:4% 0;
+	}
+	.container ul li{
+		float:left;
+		width:48%;
+		margin-bottom:4%;
+		padding:16% 0;
+		text-align: center;
+		font-size: 100px;
+	}
+	.container ul li:nth-child(odd){
+		margin-right:2%;
+	}
+	.container ul li:nth-child(even){
+		margin-left:2%;
+	}
+}
+/*
+手机,width<=767px
+ */
+@media (max-width: 767px){
+	.container{
+		position: relative;
+		top:4%;
+		padding:4%;	
+	}
+	.container h1{
+		font-size:24px;
+		padding:6% 0;
+		border-radius:5px;
+	}
+	.container ul{
+		padding:4% 0;
+	}
+	.container ul li{
+		width:100%;
+		margin-bottom:4%;
+		padding:4% 0;
+	}
+}
+/*
+iphone4
+ */
+@media (max-width: 359px){
+	.container{
+		position: relative;
+		top:0;
+	}
+	.container ul li{
+		padding:5px 0;
+		margin-bottom:2%;
+	}
+}
